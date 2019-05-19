@@ -10,6 +10,7 @@ import { NarratorComponent } from './narrator/narrator.component';
 import { CharacterComponent } from './character/character.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { SlideNavComponent } from './slide-nav/slide-nav.component';
+import { CharactersComponent } from './characters/characters.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SlideNavComponent } from './slide-nav/slide-nav.component';
     NarratorComponent,
     CharacterComponent,
     NavMenuComponent,
-    SlideNavComponent
+    SlideNavComponent,
+    CharactersComponent
   ],
   imports: [
     BrowserModule,

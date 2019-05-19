@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { PageService, PageRoute } from '../page.service';
 
 @Component({
   selector: 'app-slide-nav',
@@ -7,17 +9,19 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SlideNavComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor(private pageService: PageService, private route: ActivatedRoute) { }
 
   @Input()
-  routes: Array<NavRoute>
+  routes: Array<PageRoute>;
+
+  ngOnInit() { 
+  }
+
+  getActiveRoute() {
+  	return this.routes.find((r) => {
+  		return r.path == this.route.snapshot.url.join('/');
+  	}) 
+  }
 
 }
 
-export interface NavRoute {
-	path: string;
-	label: string;
-}

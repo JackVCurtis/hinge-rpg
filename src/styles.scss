@@ -13,6 +13,15 @@ h1, h2, h3, h4, h5 {
 
 section {
 	text-align: center;
+	height: 83%;
+}
+
+nav {
+	height: 7%;
+}
+
+footer {
+	height: 10%;
 }
 
 ul {
@@ -27,6 +36,10 @@ li {
 a {
 	color: #000033;
 	text-decoration: none;
+}
+
+p {
+	margin: 0;
 }
 
 .art {

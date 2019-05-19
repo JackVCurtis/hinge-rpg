@@ -1,3 +1,9 @@
-<p>
-  slide-nav works!
-</p>
+<div>
+	<app-nav-menu title="{{getActiveRoute().label}}"></app-nav-menu>
+	<ng-content></ng-content>
+	<footer>
+		<p *ngFor="let route of routes">
+			<a [routerLink]="'/' + route.path" routerLinkActive="active">{{route.label}}</a>
+		</p>
+	</footer>
+</div>
